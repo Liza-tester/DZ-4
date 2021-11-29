@@ -5,12 +5,13 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
-public class GithubTest {
+class GithubTest {
 
     @Test
-    public void testGithub() {
+    void testGithub() {
 
         //Открыть страницу Selenide в Github
         Configuration.browserSize = "1900x1200";
