@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class DragAndDropTest {
+class DragAndDropTest {
 
     @BeforeAll
     public static void beforeAllTests() {
@@ -18,7 +18,7 @@ public class DragAndDropTest {
     }
 
     @Test
-    public void testDragAndDrop() {
+    void testDragAndDrop() {
 
         //Перенести прямоугольник А на место В
         $("#column-a").dragAndDropTo($("#column-b"));
@@ -29,7 +29,7 @@ public class DragAndDropTest {
     }
 
     @Test
-    public void testDragAndDropWithActions() {
+    void testDragAndDropWithActions() {
 
         //Перенести прямоугольник А на место В
         actions().clickAndHold($("#column-a"))
@@ -39,6 +39,5 @@ public class DragAndDropTest {
         //Проверить, что прямоугольники действительно поменялись
         $("#column-a").shouldHave(text("B"));
         $("#column-b").shouldHave(text("A"));
-        sleep(1000);
     }
 }
